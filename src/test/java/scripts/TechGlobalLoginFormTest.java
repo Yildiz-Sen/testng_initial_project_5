@@ -71,4 +71,35 @@ public class TechGlobalLoginFormTest extends TechGlobalBase {
         Assert.assertTrue(techGlobalLoginFormPage.submitButton.isDisplayed());
     }
 
+    @Test(priority = 5, description = "Validate reset password link")
+    public void validateResetPasswordLink(){
+        techGlobalLoginFormPage.forgotPasswordLink.click();
+        techGlobalLoginFormPage.emailInputBox.sendKeys("yildizsen93@gmail.com");
+        techGlobalLoginFormPage.submitButton.click();
+        Assert.assertTrue(techGlobalLoginFormPage.emailConfirmationMessage.isDisplayed());
+    }
+
+    @Test(priority = 6, description = "Validate invalid username login")
+    public void validateInvalidUsernameLogin(){
+        techGlobalLoginFormPage.usernameInputField.sendKeys("john");
+        techGlobalLoginFormPage.passwordInputField.sendKeys("Test1234");
+        techGlobalLoginFormPage.loginButton.click();
+        Assert.assertTrue(techGlobalLoginFormPage.loginErrorMessage.isDisplayed());
+    }
+
+    @Test(priority = 7, description = "Validate invalid password login")
+    public void validateInvalidPasswordLogin(){
+        techGlobalLoginFormPage.usernameInputField.sendKeys("TechGlobal");
+        techGlobalLoginFormPage.passwordInputField.sendKeys("1234");
+        techGlobalLoginFormPage.loginButton.click();
+        Assert.assertTrue(techGlobalLoginFormPage.loginErrorMessage.isDisplayed());
+    }
+
+    @Test(priority = 8, description = "Validate invalid password and username")
+    public void validateInvalidPasswordAndUsername(){
+        techGlobalLoginFormPage.usernameInputField.sendKeys("john");
+        techGlobalLoginFormPage.passwordInputField.sendKeys("1234");
+        techGlobalLoginFormPage.loginButton.click();
+        Assert.assertTrue(techGlobalLoginFormPage.loginErrorMessage.isDisplayed());
+    }
 }

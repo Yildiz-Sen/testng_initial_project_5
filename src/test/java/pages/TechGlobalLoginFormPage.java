@@ -46,4 +46,10 @@ public class TechGlobalLoginFormPage extends TechGlobalBasePage {
 
     @FindBy(id = "submit")
     public WebElement submitButton;
+
+    @FindBy(id = "confirmation_message")
+    public WebElement emailConfirmationMessage;
+
+    @FindBy(id = "error_message")
+    public WebElement loginErrorMessage;
 }
