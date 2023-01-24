@@ -3,6 +3,7 @@ package scripts;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.TechGlobalBasePage;
 import pages.TechGlobalFrontEndTestingHomePage;
@@ -17,6 +18,8 @@ public class TechGlobalBase {
     TechGlobalFrontEndTestingHomePage techGlobalFrontendTestingHomePage;
     TechGlobalLoginFormPage techGlobalLoginFormPage;
 
+
+
     @BeforeMethod
     public void setup() {
         driver = Driver.getDriver();
@@ -26,6 +29,7 @@ public class TechGlobalBase {
         techGlobalBasePage = new TechGlobalBasePage(); // we must initialize this because we are using elements from base page
         //before methods executes this
     }
+
 
     @AfterMethod
     public void teardown() {

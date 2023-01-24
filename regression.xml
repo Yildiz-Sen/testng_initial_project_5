@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+    <test name="All Functionalities">
+        <classes>
+            <class name="scripts.TechGlobalLoginFormTest">
+                <methods>
+                    <include name="validateLoginFormCard"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateInvalidPasswordAndUsername">
+                <methods>
+                    <include name="validateInvalidPasswordAndUsername"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateInvalidPasswordLogin">
+                <methods>
+                    <include name="validateInvalidPasswordLogin"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateInvalidUsernameLogin">
+                <methods>
+                    <include name="validateInvalidUsernameLogin"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateResetPasswordLink">
+                <methods>
+                    <include name="validateResetPasswordLink"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateTechGlobalForgotPassword">
+                <methods>
+                    <include name="validateInvalidUsernameLogin"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateResetPasswordLink">
+                <methods>
+                    <include name="validateResetPasswordLink"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateTechGlobalForgotPassword">
+                <methods>
+                    <include name="validateTechGlobalForgotPassword"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateTechGlobalLogin">
+                <methods>
+                    <include name="validateTechGlobalLogin"/>
+                </methods>
+            </class>
+            <class name="scripts.ValidateTechGlobalLoginAndLogout">
+                <methods>
+                    <include name="validateTechGlobalLoginAndLogout"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
